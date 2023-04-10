@@ -6,7 +6,7 @@ def buildThumbnail():
     bolinha = bolinha.rotate(-3, resample=Image.BICUBIC, expand=False)
     # bolinha = bolinha.rotate(-5)
     pix = bolinha.load()
-    color = pix[390, 411]
+    color = pix[407, 411]
 
     buildContourLinesBlurBackground(color)
     buildBrushHead(color)
@@ -33,7 +33,7 @@ def buildThumbnail():
     background.thumbnail(size)
     # background.save('images/thumb/final_thumbnail.png', optimize=True)
     background.save('images/thumb/final_thumbnail.png')
-    # background.show()
+    background.show()
 
 def buildContourLinesBlurBackground(color):
     r, g, b, alpha = color

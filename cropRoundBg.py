@@ -4,7 +4,7 @@ import numpy as np
 def removeBackGround():
     
     # Round crop
-    img = Image.open("images/subscribe/sub3.png").convert("RGB")
+    img = Image.open("images/subscribe/sub.png").convert("RGB")
     npImage = np.array(img)
     h, w = img.size
 
