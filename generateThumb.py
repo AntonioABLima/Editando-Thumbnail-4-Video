@@ -29,6 +29,7 @@ def buildThumbnail():
     
     size = 1280, 720
     background.thumbnail(size)
+    background.show()
     background.save('images/thumb/final_thumbnail.png')
 
 def buildContourLinesBlurBackground(color):
@@ -47,7 +48,6 @@ def buildContourLinesBlurBackground(color):
 
     im2 = Image.fromarray(data)
     im2 = im2.filter(ImageFilter.GaussianBlur(radius = 20))
-    im2.show()
     im2.save('images/thumb/final_background.png')
 
 

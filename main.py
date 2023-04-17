@@ -4,7 +4,7 @@ from generateThumb import buildThumbnail
 from cropRoundBg import removeBackGround
 
 def main():
-    os.system("node Manipulating_Thumbnail/generateSub.js")
+    os.system("node generateSub.js")
     removeBackGround()
     buildClock()
     buildThumbnail()

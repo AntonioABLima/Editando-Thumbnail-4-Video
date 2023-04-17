@@ -32,7 +32,7 @@ def buildClock():
     drawTxt = ImageDraw.Draw(finalImage) 
 
     # specified font size
-    font = ImageFont.truetype('Manipulating_Thumbnail/VisbyRoundCF-ExtraBold.otf', 150) 
+    font = ImageFont.truetype('VisbyRoundCF-ExtraBold.otf', 150) 
 
     drawTxt.text((250, 0), time_text, font=font, align='center')
     finalImage.save('images/clock/final_clock.png')
