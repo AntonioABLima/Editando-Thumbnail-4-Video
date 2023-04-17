@@ -4,7 +4,6 @@ import numpy as np
 def buildThumbnail():
     bolinha = Image.open('images/subscribe/result.png')
     bolinha = bolinha.rotate(-3, resample=Image.BICUBIC, expand=False)
-    # bolinha = bolinha.rotate(-5)
     pix = bolinha.load()
     color = pix[407, 411]
 
@@ -20,20 +19,17 @@ def buildThumbnail():
     pincelPonta = Image.open('images/thumb/final_ponta_pincel.png')
 
     clock = Image.open('images/clock/final_clock.png')
-    clock.thumbnail((300, 300), Image.Resampling.LANCZOS)
-
+    clock.thumbnail((500, 500), Image.Resampling.LANCZOS)
 
     background.paste(cavalete, (0 ,0), cavalete)
     background.paste(bolinha, (1047 ,114), bolinha)
     background.paste(eu, (0,0), eu)
     background.paste(pincelPonta, (0,0), pincelPonta)
-    background.paste(clock, (1650,750), clock)
+    background.paste(clock, (535,2), clock)
     
     size = 1280, 720
     background.thumbnail(size)
-    # background.save('images/thumb/final_thumbnail.png', optimize=True)
     background.save('images/thumb/final_thumbnail.png')
-    background.show()
 
 def buildContourLinesBlurBackground(color):
     r, g, b, alpha = color
@@ -51,7 +47,7 @@ def buildContourLinesBlurBackground(color):
 
     im2 = Image.fromarray(data)
     im2 = im2.filter(ImageFilter.GaussianBlur(radius = 20))
-    # im2.show()
+    im2.show()
     im2.save('images/thumb/final_background.png')
 
 
@@ -70,8 +66,5 @@ def buildBrushHead(color):
     data[..., :-1][black_areas.T] = (r, g, b) # Transpose back needed
 
     im2 = Image.fromarray(data)
-    # im2.show()
     im2.save('images/thumb/final_ponta_pincel.png')
 
-# buildThumbnail()
-# buildContourLinesBlurBackground()
