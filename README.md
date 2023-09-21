@@ -8,6 +8,13 @@ Este é um projeto de creative coding que explora a geração de arte visual ale
 Baseado na cor aleatoriamente escolhida, o programa começa a produzir a as imagens que compõem a thumb.
 
 ## Alterando imagens que fazem parte da thumb: 
-Cor escolhida: 
-<span style="background-color:#RRGGBB;">Texto com fundo colorido</span>
+Exemplo de cor escolhida: ![quadrado Azul](https://github.com/AntonioABLima/Editando-Thumbnail-4-Video/assets/104531655/50d41371-f43a-4392-a135-e3a6f916191d) #2bc3fb
 
+1. Para a imgagem de background, criei um padrão de linhas de contorno preto por cima de uma background cinza, depois todo pixel com valor (0,0,0) preto é tranformando na cor azul e um filtro de GaussianBlur é aplicado.
+2. Para o pincel, separei uma imagem com a forma da ponta do pincel toda preta, depois todo pixel preto é transformado na cor azul e a imagem é sobreposta na imagem onde seguro o pincel .
+
+![1](https://github.com/AntonioABLima/Editando-Thumbnail-4-Video/assets/104531655/bce5aadd-9869-4e45-a6ab-8cfb1013f3ec)
+
+3. A imagem de um relogio de ponteiro é gerado baseado no horario atual.
+4. 
+![clock](https://github.com/AntonioABLima/Editando-Thumbnail-4-Video/assets/104531655/02e25b1f-a228-4e2e-8c56-78976fd94ad9)
